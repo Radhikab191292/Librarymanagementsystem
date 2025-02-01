@@ -1,0 +1,50 @@
+project=java-> frontend,Mysql->backend
+LMS=manago=ing things behind the library 
+FRONTEND
+ java swings
+IDE:NetBeans
+FUNCTIONS:
+LOgin page
+Books available.staff details.add books.remove books.add staff,Remove Staff
+BACKEND:
+Mysql
+1.admin Table: there canbe any no.of admins,Credentials are stored managing the system,Authorised acces
+2.Books Table:Books available in the library like names
+3.Staff Table: details of the staff present
+merge backend and frontend using jdbc
+
+FRONTEND;
+----------
+login page is created
+
+
+-------------------
+VIDEO 2
+--------------------
+ here we create the dashboard
+after login into the admin would go to the dashboard like he has to see all the library functions
+GUI FRAME,JFRAME FORM 
+Dashboard is created 
+where we add the buttons such as
+books available
+staff details
+add books
+add staff
+remove books
+remove staff
+Edit admin buttons
+
+-------------------
+VIDEO 3
+--------------------
+
+
+
+
+
+ 
+
+
+ 
+ 
+ 
