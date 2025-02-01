@@ -1,0 +1,17 @@
+CREATE TABLES
+---------------
+ADMIN TABLE:
+
+userId(PK)    Name     Password    contact
+
+BOOK TABLE:
+-----------
+
+BookId(PK)    Category   Name     Author    Copies
+
+STAFF TABLE
+---------------
+Staffid(PK)    Staffname  Contact
+
+
+
