@@ -13,5 +13,55 @@ STAFF TABLE
 ---------------
 Staffid(PK)    Staffname  Contact
 
+VIDE0 4:
+----------
+this.dispose will  remove the login page display after login
+Joptionpane os used to display the user name is wrong
+setvisibile is to show 
+
+VIDE0 5:
+----------
+import java.sql.*
+import java.swing.*;
+by writing gettext metho you can get the input
+
+DASHBORD:
+Books available
+->fetch 
+->back
+Add books
+->book id
+->book name
+->Author
+->catedory
+->copies
+staff 
+->fetch exit
+->staffid
+->name
+->contact
+import java.swing.defaulttablemodel`
+Add staff:
+->staffid
+->name
+->contact
+-> add,cancel
+remove books
+remove staff
+edit admin
+-userid
+-name
+-passsword
+-contact
+
+
+
+
+
+
+
+
+
+
 
 
