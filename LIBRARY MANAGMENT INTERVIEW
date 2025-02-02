@@ -1,0 +1,88 @@
+
+
+"During my internship,
+I developed a Library Management System in Java to handle book records, user management(Authentication,staff,students) and book transactions. 
+The system allows librarians to add, update, search, and remove books, as well as track borrowed and returned books.
+I used Java for the backend,
+MySQL for data storage, 
+and Swing/JavaFX for the UI. 
+Using Swing/JavaFX, I created an interactive interface. 
+This project helped me strengthen my OOP concepts, database management, and problem-solving skills."
+
+
+Library Management System automates the process, reducing human errors and making operations faster. With this system:
+✅ Librarians can easily search, add, and remove books instead of maintaining physical registers.
+✅ Students can check book availability before visiting the library.
+✅ The system automatically calculates overdue fines, ensuring proper returns.
+
+
+I implemented search indexing in SQL to speed up queries
+ and
+used exception handling in Java to prevent system crashes. 
+
+
+    TABLES
+-----------------
+
+1. Users Table (With Authentication)
+
+CREATE TABLE Users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,  -- Hashed Password for Security
+    role ENUM('Librarian', 'Student') NOT NULL
+);
+
+2. Books Table (Stores book details)
+
+CREATE TABLE Books (
+    book_id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    author VARCHAR(100) NOT NULL,
+    available_copies INT NOT NULL CHECK (available_copies >= 0)
+);
+
+3. Transactions Table (Tracks book issuance & return)
+
+CREATE TABLE Transactions (
+    transaction_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    book_id INT,
+    issue_date DATE NOT NULL,
+    return_date DATE DEFAULT NULL,
+    status ENUM('Issued', 'Returned') NOT NULL DEFAULT 'Issued',
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE,
+    FOREIGN KEY (book_id) REFERENCES Books(book_id) ON DELETE CASCADE
+);
+
+4.Fines Table (Tracks fines for late returns)
+
+CREATE TABLE Fines (
+    fine_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    transaction_id INT,
+    amount DECIMAL(5,2) NOT NULL,
+    paid_status ENUM('Pending', 'Paid') DEFAULT 'Pending',
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE,
+    FOREIGN KEY (transaction_id) REFERENCES Transactions(transaction_id) ON DELETE CASCADE
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
